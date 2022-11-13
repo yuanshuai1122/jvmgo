@@ -15,9 +15,7 @@ type Cmd struct {
 }
 
 /*
-*
-
-	cmd解析函数
+cmd解析函数
 */
 func parseCmd() *Cmd {
 	cmd := &Cmd{}
@@ -37,10 +35,18 @@ func parseCmd() *Cmd {
 }
 
 /*
-*
-
-	打印提示语到控制台
+打印提示语到控制台
 */
 func printUsage() {
 	fmt.Printf("Usage: %s [-options] class [args...]\n", os.Args[0])
+}
+
+/*
+*
+
+	模拟开启了jvm
+*/
+func startJVM(cmd *Cmd) {
+	fmt.Printf("classpath:%s class:%s args:%v\n",
+		cmd.cpOption, cmd.class, cmd.args)
 }
