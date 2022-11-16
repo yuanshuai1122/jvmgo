@@ -18,7 +18,7 @@ func newDirEntry(path string) *DirEntry {
 	// 将path转为绝对路径
 	absDir, err := filepath.Abs(path)
 	if err != nil {
-		panic(any(err))
+		panic(err)
 	}
 	return &DirEntry{absDir}
 }

@@ -12,8 +12,6 @@ type Classpath struct {
 }
 
 /*
-*
-
 	使用-Xjre选项解析启动类路径和扩展类路径，使用-classpath/-cp 选项解析用户类路径
 */
 func Parse(jreOption, cpOption string) *Classpath {
@@ -52,7 +50,7 @@ func getJreDir(jreOption string) string {
 		return filepath.Join(jh, "jre")
 	}
 	// 没找到
-	panic(any("Can not find jre folder!"))
+	panic("Can not find jre folder!")
 }
 
 /*

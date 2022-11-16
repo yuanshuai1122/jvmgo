@@ -3,8 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"jvmgo/ch02/classpath"
 	"os"
+	"projects/jvmgo/ch02/classpath"
 	"strings"
 )
 
